@@ -6,6 +6,7 @@ import { MdEmail } from "react-icons/md";
 const AllReviews = () => {
   const allLoadedReviews = useLoaderData();
   const [allReviews, setAllReviews] = useState(allLoadedReviews);
+  setAllReviews(allLoadedReviews);
 
   return (
     <div>
