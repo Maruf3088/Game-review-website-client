@@ -10,7 +10,7 @@ const WatchList = () => {
     if (!user?.email) return;
 
     fetch(
-      `https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/watchLists?email=${user.email}`
+      `https://game-review-website-server-1.onrender.com/watchLists?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setWatchList(data))
@@ -29,7 +29,7 @@ const WatchList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/watchLists/${id}`,
+          `https://game-review-website-server-1.onrender.com/watchLists/${id}`,
           {
             method: "DELETE",
           }

@@ -12,7 +12,7 @@ const MyReviews = () => {
     if (!user?.email) return;
 
     fetch(
-      `https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/reviews?email=${user.email}`
+      `https://game-review-website-server-1.onrender.com/reviews?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setMyReviews(data));
@@ -30,7 +30,7 @@ const MyReviews = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/reviews/${id}`,
+          `https://game-review-website-server-1.onrender.com/reviews/${id}`,
           {
             method: "DELETE",
           }
@@ -64,7 +64,7 @@ const MyReviews = () => {
     };
 
     fetch(
-      `https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/reviews/${selectedReview._id}`,
+      `https://game-review-website-server-1.onrender.com/reviews/${selectedReview._id}`,
       {
         method: "PUT",
         headers: {

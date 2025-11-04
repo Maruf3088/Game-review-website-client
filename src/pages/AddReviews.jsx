@@ -32,16 +32,13 @@ const AddReview = () => {
       userName,
       userPhoto,
     };
-    fetch(
-      "https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/reviews",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(reviewInfo),
-      }
-    )
+    fetch("https://game-review-website-server-1.onrender.com/reviews", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(reviewInfo),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

@@ -16,6 +16,8 @@ import AllReviewsPage from "./pages/AllReviewsPage.jsx";
 import MyReviews from "./pages/MyReviews.jsx";
 import WatchList from "./pages/WatchList.jsx";
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,9 +27,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () =>
-          fetch(
-            "https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/reviews"
-          ),
+          fetch("https://game-review-website-server-1.onrender.com/reviews"),
       },
       {
         path: "/login",
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/reviews/${params.id}`
+            `https://game-review-website-server-1.onrender.com/reviews/${params.id}`
           ),
       },
       {
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
         element: <AllReviewsPage></AllReviewsPage>,
         loader: () =>
           fetch(
-            "https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/all-reviews"
+            "https://game-review-website-server-1.onrender.com/all-reviews"
           ),
       },
       {

@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import Navber from "../components/Navber";
-import Hero from "../components/Hero";
-import Gamelogos from "../components/Gamelogos";
-import Players from "../components/players";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 import AOS from "aos";

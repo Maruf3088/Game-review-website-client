@@ -25,16 +25,13 @@ const ReviewDetails = () => {
       userEmail,
     };
 
-    fetch(
-      "https://game-reviews-server-7ud5ihzx7-maruf3088s-projects.vercel.app/watchlist",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(watchlistInfo),
-      }
-    )
+    fetch("https://game-review-website-server-1.onrender.com/watchlist", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(watchlistInfo),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
